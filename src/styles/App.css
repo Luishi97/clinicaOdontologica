@@ -1,0 +1,6 @@
+@import './colors.css';
+
+body {
+  color: var(--text-black);
+  font-family: 'Sarabun', sans-serif;
+}

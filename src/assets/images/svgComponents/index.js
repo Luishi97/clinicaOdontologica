@@ -1,0 +1,6 @@
+export { default as LoadingSvg } from './LoadingSvg'
+export { default as CountsSvg } from './CountsSvg'
+export { default as MeetingSvg } from './MeetingSvg'
+export { default as NotFoundSvg } from './NotFoundSvg'
+export { default as OrdersSvg } from './OrdersSvg'
+export { default as AtencionSvg } from './AtencionSvg'

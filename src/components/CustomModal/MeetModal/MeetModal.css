@@ -1,0 +1,54 @@
+.modal-meet_body {
+  background: none;
+}
+.modal-meet_body-list {
+  list-style: none;
+}
+.modal-meet_body-list-item {
+  border-left: var(--blue) solid 2px;
+  transition: all linear 0.2s;
+  margin: 0px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.modal-meet_body-list-item:hover {
+  transform: translate(2px, -2px);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(var(--silver-box_shadown-rgb), 0.5);
+}
+.modal-meet_body-list-item .modal-meet_body-list-item-actinons {
+  opacity: 0;
+
+  transition: all linear 0.5s;
+}
+.modal-meet_body-list-item:hover .modal-meet_body-list-item-actinons {
+  opacity: 1;
+}
+.done {
+  text-decoration: line-through;
+  text-decoration-color: brown;
+}
+.modal-meet_body-list-item-hour {
+  font-weight: bold;
+  font-size: 1.1rem;
+  justify-items: self-start;
+  margin-right: 10px;
+}
+
+.modal-meet_body-list-item-name {
+  font-size: 1.1rem;
+  margin-right: 5px;
+  text-transform: capitalize;
+  justify-items: self-end;
+}
+
+/* CreateMeet */
+.form-register_input {
+  width: 100%;
+  display: block;
+}
+.form-button-submit {
+  width: 100%;
+}

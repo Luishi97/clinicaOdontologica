@@ -1,0 +1,46 @@
+.cell {
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-top: #c0c0c0 solid 1px;
+  margin: 2px;
+  height: 7rem;
+  overflow: auto;
+  text-align: left;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+}
+.cell:hover {
+  background-color: var(--orange-secundary);
+}
+
+.cell-today {
+  border: var(--orange) solid 2px;
+}
+
+.cell-date_nunmber {
+  text-align: right;
+}
+.cell-meets {
+  overflow-y: hidden;
+}
+
+.cell-meets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cell-meets .ant-badge-status {
+  width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notes-month {
+  font-size: 28px;
+  text-align: center;
+}
+.notes-month section {
+  font-size: 28px;
+}

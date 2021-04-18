@@ -1,0 +1,30 @@
+.layout {
+  height: 100vh;
+}
+
+#components-layout-demo-responsive .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.site-layout-sub-header-background {
+  background: var(--orange);
+  padding: 0px;
+}
+
+.site-layout-background {
+  background: #fff;
+  padding: 24px;
+  min-height: 360px;
+  height: 100%;
+  overflow: auto;
+}
+.menu-item {
+  font-size: large;
+}
+
+.site-layout-content {
+  margin: 24px 16px 0px;
+}
