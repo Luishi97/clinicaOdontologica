@@ -1,0 +1,8 @@
+.pattients_container {
+  border-radius: 1rem;
+  box-shadow: 3px 10px 15px rgba(var(--silver-box_shadown-rgb, 0.8));
+  background: linear-gradient(135deg, rgba(184, 229, 62, 0.5) 10%, rgba(62, 229, 137, 0.5)),
+    url('https://images.pexels.com/photos/3845653/pexels-photo-3845653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-position: center;
+  background-size: cover;
+}

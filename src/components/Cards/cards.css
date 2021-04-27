@@ -1,0 +1,29 @@
+.cardSelectable {
+  border-color: #c0c0c0;
+  border-radius: 1.5rem;
+  padding: 2px;
+  transition: all 0.3s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.cardSelectable:hover {
+  transform: translate(-3px, -5px) rotate(-3deg);
+  transition: all 0.3s;
+  box-shadow: 5px 5px 15px rgba(var(--silver-box_shadown-rgb, 0.5));
+}
+
+.cardSelectable .ant-card-cover {
+  border-radius: 1.5rem;
+  background: linear-gradient(-15deg, rgba(var(--blue-rgb), 0.8), rgba(var(--blue-ligth-rgb), 0.8));
+  border-bottom-right-radius: 10rem;
+}
+.cardSelectable_body {
+  text-align: center;
+}
+.cardSelectable_body .ant-card-meta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+.cardSelectable_body .ant-card-meta-description {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1rem;
+}

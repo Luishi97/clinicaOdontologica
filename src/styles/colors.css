@@ -2,11 +2,20 @@
   --orange: #f39c12;
   --orange-secundary: #ffb816;
   --blue: #1c1ca6;
+  --blue-ligth: #00baf6;
   --silver: #ccd1d1;
+
+  --green: #719450;
+  --blue-light-2: #9ec7dd;
 
   --text-silver: #9088a1;
   --text-black: #221243;
 
   --silver-box_shadown-rgb: 144, 136, 161;
   --orange-rgb: 243, 156, 18;
+  --blue-ligth-rgb: 0, 186, 246;
+  --blue-rgb: 28, 28, 166;
+
+  --green-rgb: 113, 148, 80;
+  --blue-light-2-rgb: 158, 199, 221;
 }

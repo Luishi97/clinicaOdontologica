@@ -1,19 +1,45 @@
-import { Suspense } from 'react'
+import { lazy, Suspense } from 'react'
 import { Router } from '@reach/router'
-import PropTypes from 'prop-types'
 
 import { LoadingSvg } from '../assets/images/svgComponents'
 
-function Routes({ children }) {
+const Meets = lazy(() => {
+  return Promise.all([
+    import('../Views/Meets'),
+    new Promise((resolve) => setTimeout(resolve, 300))
+  ]).then(([moduleExports]) => moduleExports)
+})
+
+const Patients = lazy(() => {
+  return Promise.all([
+    import('../Views/Patients'),
+    new Promise((resolve) => setTimeout(resolve, 300))
+  ]).then(([moduleExports]) => moduleExports)
+})
+const SerachPattients = lazy(() => {
+  return Promise.all([
+    import('../Views/Patients/screens/SearchPatient'),
+    new Promise((resolve) => setTimeout(resolve, 300))
+  ]).then(([moduleExports]) => moduleExports)
+})
+const AddNewUser = lazy(() => {
+  return Promise.all([
+    import('../Views/Patients/screens/AddNewUser/'),
+    new Promise((resolve) => setTimeout(resolve, 300))
+  ]).then(([moduleExports]) => moduleExports)
+})
+
+function Routes() {
   return (
     <Suspense fallback={<LoadingSvg />}>
-      <Router>{children}</Router>
+      <Router>
+        <Meets path="citas" />
+        <Patients path="pacientes" />
+        <AddNewUser path="pacientes/agregarPaciente" />
+        <SerachPattients path="pacientes/buscarPaciente" />
+      </Router>
     </Suspense>
   )
-}
-
-Routes.propTypes = {
-  children: PropTypes.node
 }
 
 export default Routes
