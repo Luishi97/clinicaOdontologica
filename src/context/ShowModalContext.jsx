@@ -18,7 +18,7 @@ const Provider = ({ children, additionalHandlers }) => {
   }
 
   const handleCancel = () => {
-    additionalHandlers.handleMeetsOfDay(null)
+    if (additionalHandlers.handleMeetsOfDay) additionalHandlers.handleMeetsOfDay(null)
     setIsModalVisible(false)
   }
 

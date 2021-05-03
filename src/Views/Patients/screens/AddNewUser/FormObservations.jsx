@@ -17,6 +17,7 @@ const tailLayout = {
 }
 export default function FormObservations({
   formObservationsData: { observations },
+  submitText,
   handleFormObservationsData,
   handleFinish
 }) {
@@ -35,7 +36,7 @@ export default function FormObservations({
 
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit">
-          Registrar
+          {submitText}
         </Button>
       </Form.Item>
     </Form>
@@ -43,6 +44,7 @@ export default function FormObservations({
 }
 
 FormObservations.propTypes = {
+  submitText: PropTypes.string,
   formObservationsData: PropTypes.shape({
     observations: PropTypes.string
   }),

@@ -3,6 +3,7 @@ import { Loader } from './components'
 import firebase from './config/firebase'
 import './styles/App.css'
 import 'antd/dist/antd.css'
+import ShowTopMenuContext from './context/ShowTopMenuContext'
 
 function App() {
   const [userData, setUserData] = useState()
@@ -27,7 +28,9 @@ function App() {
 
   return (
     <Suspense fallback={<Loader />}>
-      <Main />
+      <ShowTopMenuContext.Provider value={{}}>
+        <Main />
+      </ShowTopMenuContext.Provider>
     </Suspense>
   )
 }

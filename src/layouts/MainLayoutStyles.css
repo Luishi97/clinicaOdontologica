@@ -14,6 +14,25 @@
   padding: 0px;
 }
 
+.site-layout-sub-header-background-menu {
+  background-color: transparent;
+  text-align: right;
+  color: white;
+}
+.site-layout-sub-header-background-menu-item {
+  background-color: var(--orange-secundary);
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.15em;
+  vertical-align: middle;
+  text-align: center;
+}
+.site-layout-sub-header-background-menu-item:hover {
+  background-color: #21618c;
+}
+
 .site-layout-background {
   background: #fff;
   padding: 24px;
@@ -27,4 +46,12 @@
 
 .site-layout-content {
   margin: 24px 16px 0px;
+}
+
+@media screen and (max-width: 700px) {
+  .site-layout-sub-header-background-menu-item {
+    font-size: 0.95rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
 }

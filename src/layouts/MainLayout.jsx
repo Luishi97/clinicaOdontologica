@@ -1,13 +1,18 @@
-import { Layout, Menu } from 'antd'
+import { Button, Layout, Menu } from 'antd'
 import { FcConferenceCall, FcPlanner, FcViewDetails, FcMoneyTransfer } from 'react-icons/fc'
 import { Link } from '@reach/router'
 
 import Routes from '../Routes'
 import './MainLayoutStyles.css'
+import { useContext } from 'react'
+import { ShowTopMenuContext } from '../context/ShowTopMenuContext'
 
 const { Header, Content, Sider } = Layout
 
 export default function MainLayout() {
+  const { isVisible, handlerShowClinic, handlerShowDebts, handlerShowPrescription } = useContext(
+    ShowTopMenuContext
+  )
   return (
     <Layout className="layout">
       <Sider breakpoint="lg" collapsedWidth="0" id="components-layout-demo-responsive">
@@ -28,7 +33,36 @@ export default function MainLayout() {
         </Menu>
       </Sider>
       <Layout>
-        <Header className="site-layout-sub-header-background" />
+        <Header className="site-layout-sub-header-background">
+          {isVisible && (
+            <div className="site-layout-sub-header-background-menu">
+              <Button
+                type="primary"
+                className="site-layout-sub-header-background-menu-item"
+                size="large"
+                onClick={handlerShowDebts}
+              >
+                Deudas
+              </Button>
+              <Button
+                type="primary"
+                className="site-layout-sub-header-background-menu-item"
+                size="large"
+                onClick={handlerShowClinic}
+              >
+                Ficha clínica
+              </Button>
+              <Button
+                type="primary"
+                className="site-layout-sub-header-background-menu-item"
+                size="large"
+                onClick={handlerShowPrescription}
+              >
+                Generar receta
+              </Button>
+            </div>
+          )}
+        </Header>
         <Content className="site-layout-content">
           <div className="site-layout-background">
             <Routes />

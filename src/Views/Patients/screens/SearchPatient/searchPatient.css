@@ -1,0 +1,95 @@
+.search_patient {
+  box-shadow: 2px 3px 15px #aeb6bf;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: auto;
+  /* background: linear-gradient(transparent 50%, #0e457e, #6cd3da, #e0f0e6); */
+  /* background: linear-gradient(#1f618d, #1f618d); */
+  background: linear-gradient(-90deg, #1f618d, #21618c);
+}
+
+.search_patient-loading {
+  width: 55%;
+}
+
+.search_patient-search_container {
+  margin-bottom: 2rem;
+}
+.search_patient-divider {
+  border-bottom: 5px white solid;
+}
+
+.search_patient-search_container .search_patient-auto_complete {
+  width: 70%;
+}
+.search_patient-search_container-yearsOld {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.2rem;
+  color: #f2f4f4;
+}
+
+.search_patient-form_evolution {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  border-bottom-right-radius: 5rem;
+}
+.search_patient-form_evolution label {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-black);
+}
+
+.evolution_history {
+  margin: 50px 20px;
+  background-color: #f2f4f4;
+  border-radius: 1rem;
+  padding: 20px;
+}
+.evolution_history-emptyText {
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: 'Sarabun', sans-serif;
+}
+.evolution_item {
+  text-transform: capitalize;
+  color: var(--text-silver);
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.1rem;
+  margin: 50px 20px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 2px solid #0e457e;
+  position: relative;
+}
+.evolution_item label {
+  color: var(--text-silver);
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.1rem;
+}
+
+.evolution_item-date {
+  position: absolute;
+  border-radius: 1rem;
+  border: 2px solid #0e457e;
+  background-color: white;
+  padding: 8px 3px 0px;
+  top: -1.2rem;
+  right: 1rem;
+}
+.evolution_item-date-text {
+  vertical-align: middle;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .search_patient-loading {
+    width: 95%;
+  }
+  .search_patient-search_container .search_patient-auto_complete {
+    width: 100%;
+  }
+  .evolution_item-date {
+    right: -1rem;
+  }
+}

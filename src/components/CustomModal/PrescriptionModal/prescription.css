@@ -1,0 +1,106 @@
+.body_prescription {
+  background: linear-gradient(#0e457e, #1f618d);
+  border-radius: 2rem;
+  color: white;
+  height: 100%;
+  padding: 2rem;
+}
+
+.prescription-form {
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.form-prescription_item {
+  border-bottom: rgb(var(--silver-box_shadown-rgb)) 1px solid;
+  padding: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s;
+}
+
+.form-register_input-icon {
+  border-radius: 50%;
+  background-color: white;
+  border: white 1.5px solid;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* Begin prescription preview */
+
+.prescription-container {
+  /* background-image:   url('../../../assets/images/forBack/teen.png'); */
+  /* background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: right; */
+  width: 20.4cm;
+  border: 2px #1f618d solid;
+  border-radius: 0.3em;
+  padding: 2rem;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-black);
+}
+
+.logo {
+  width: 5rem;
+}
+
+.prescription-header {
+  font-size: 10pt;
+  color: var(--text-black);
+}
+
+.prescription-personal_data {
+  text-transform: capitalize;
+  font-size: 12pt;
+  border-bottom: 2px #1f618d solid;
+  display: inline;
+}
+
+.field_data {
+  font-size: 11pt;
+  color: var(--text-silver);
+}
+
+.prescription-header-items {
+  font-size: 12pt;
+  margin-top: 1rem;
+}
+
+.prescription-header_indicator {
+  font-weight: bold;
+}
+
+.presciption_list {
+  font-size: 12pt;
+  margin-bottom: 100px;
+}
+
+.presciption_list-item {
+  border: 2px #1f618d dashed;
+}
+
+.prescription-item {
+  text-transform: capitalize;
+}
+
+.prescription-firma {
+  bottom: 0;
+  margin: auto;
+  border-top: 2px black solid;
+  text-align: center;
+  width: 30%;
+}
+
+/* Buttons for save and print*/
+.prescription-buttons {
+  text-align: center;
+}

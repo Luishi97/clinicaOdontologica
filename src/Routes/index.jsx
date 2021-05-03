@@ -18,13 +18,27 @@ const Patients = lazy(() => {
 })
 const SerachPattients = lazy(() => {
   return Promise.all([
-    import('../Views/Patients/screens/SearchPatient'),
+    import('../Views/Patients/screens/SearchPatient/'),
     new Promise((resolve) => setTimeout(resolve, 300))
   ]).then(([moduleExports]) => moduleExports)
 })
 const AddNewUser = lazy(() => {
   return Promise.all([
     import('../Views/Patients/screens/AddNewUser/'),
+    new Promise((resolve) => setTimeout(resolve, 300))
+  ]).then(([moduleExports]) => moduleExports)
+})
+
+const Accounts = lazy(() => {
+  return Promise.all([
+    import('../Views/Accounts'),
+    new Promise((resolve) => setTimeout(resolve, 300))
+  ]).then(([moduleExports]) => moduleExports)
+})
+
+const Orders = lazy(() => {
+  return Promise.all([
+    import('../Views/Orders'),
     new Promise((resolve) => setTimeout(resolve, 300))
   ]).then(([moduleExports]) => moduleExports)
 })
@@ -37,6 +51,8 @@ function Routes() {
         <Patients path="pacientes" />
         <AddNewUser path="pacientes/agregarPaciente" />
         <SerachPattients path="pacientes/buscarPaciente" />
+        <Accounts path="cuentas" />
+        <Orders path="orden" />
       </Router>
     </Suspense>
   )

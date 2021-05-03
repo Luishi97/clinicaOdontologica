@@ -19,7 +19,7 @@ export default function useGetMountMeets({ selectedMont }) {
         'initOfMeet',
         '<=',
         fire.firestore.Timestamp.fromDate(
-          new Date(selectedMont.year(), selectedMont.month(), 31, 23, 59, 59)
+          new Date(selectedMont.year(), selectedMont.month() + 1, 0, 0, 0, 0)
         )
       )
       .onSnapshot((meets) => {
