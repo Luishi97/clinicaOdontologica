@@ -4,6 +4,7 @@ import firebase from './config/firebase'
 import './styles/App.css'
 import 'antd/dist/antd.css'
 import ShowTopMenuContext from './context/ShowTopMenuContext'
+import Login from './Views/Login'
 
 function App() {
   const [userData, setUserData] = useState()
@@ -15,16 +16,17 @@ function App() {
   )
 
   useEffect(() => {
-    const isAuth = async () => {
-      const user = await firebase.auth().onAuthStateChanged()
-      if (user) setUserData(user)
-      else setUserData(null)
+    const isAuth = () => {
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) setUserData(user)
+        else setUserData(null)
+      })
     }
 
     if (!userData) isAuth()
   }, [userData])
 
-  console.log(userData)
+  if (!userData) return <Login />
 
   return (
     <Suspense fallback={<Loader />}>

@@ -1,0 +1,113 @@
+body {
+  overflow: hidden;
+}
+.form-name {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: var(--orange);
+}
+.form-items label {
+  margin-bottom: 1rem;
+  color: var(--text-silver);
+}
+.register-panel-welcome {
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.register-panel-welcome::before {
+  content: '';
+  position: absolute;
+  background: radial-gradient(#1f618d 20%, #1f318d 80%);
+  border-radius: 50%;
+  right: -50px;
+  top: -50%;
+  bottom: 0;
+  box-shadow: 2px 0px 15px var(--text-silver);
+  height: 200vh;
+  width: 100vw;
+}
+.register-panel-form {
+  display: flex;
+  height: auto;
+  align-content: center;
+  padding: 3rem;
+}
+.login-form {
+  margin: auto;
+  height: 80vh;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 10px;
+  /* box-shadow: 5px 5px 15px var(--text-silver); */
+  min-height: 50%;
+  text-align: center;
+}
+.register-avatar {
+  color: white;
+  background: none;
+}
+.register-logo {
+  width: 200px;
+  height: 200px;
+}
+.register-panel-text {
+  min-height: 100px;
+  padding: 50px 0px;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 2rem;
+  width: 100%;
+  padding: 50px;
+  font-weight: bold;
+  color: white;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.register-form {
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 10px;
+}
+
+.register-button {
+  background-color: var(--orange);
+  border: 1px var(--orange) solid;
+  width: 100%;
+}
+.register-button:hover {
+  background-color: var(--orange-secundary);
+  border: 1px var(--orange) solid;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    overflow: auto;
+  }
+  .register-panel-welcome {
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(#1f618d 20%, #1f318d 80%);
+  }
+  .register-panel-welcome::before {
+    content: none;
+  }
+  .login-form {
+    margin: auto;
+    height: 80vh;
+    width: 100%;
+    top: -50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px var(--text-silver);
+    text-align: center;
+  }
+
+  .register-form {
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+  }
+}

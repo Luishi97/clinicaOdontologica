@@ -2,6 +2,7 @@ import { Button, Layout, Menu } from 'antd'
 import { FcConferenceCall, FcPlanner, FcViewDetails, FcMoneyTransfer } from 'react-icons/fc'
 import { Link } from '@reach/router'
 
+import firebase from '../config/firebase'
 import Routes from '../Routes'
 import './MainLayoutStyles.css'
 import { useContext } from 'react'
@@ -62,6 +63,14 @@ export default function MainLayout() {
               </Button>
             </div>
           )}
+          <Button
+            type="primary"
+            onClick={() => {
+              firebase.auth().signOut()
+            }}
+          >
+            Cerrar sesión
+          </Button>
         </Header>
         <Content className="site-layout-content">
           <div className="site-layout-background">

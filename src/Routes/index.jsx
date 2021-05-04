@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { Router } from '@reach/router'
+import { Redirect, Router } from '@reach/router'
 
 import { LoadingSvg } from '../assets/images/svgComponents'
 
@@ -43,10 +43,19 @@ const Orders = lazy(() => {
   ]).then(([moduleExports]) => moduleExports)
 })
 
+const Register = lazy(() => {
+  return Promise.all([
+    import('../Views/Login/screens/register/'),
+    new Promise((resolve) => setTimeout(resolve, 300))
+  ]).then(([moduleExports]) => moduleExports)
+})
+
 function Routes() {
   return (
     <Suspense fallback={<LoadingSvg />}>
       <Router>
+        <Redirect from="/" to="citas" />
+        <Register path="register" />
         <Meets path="citas" />
         <Patients path="pacientes" />
         <AddNewUser path="pacientes/agregarPaciente" />
